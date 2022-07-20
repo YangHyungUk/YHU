@@ -1,0 +1,11 @@
+$(function(){
+    $("#main_youtv").click(function(){
+        $("#modal_wrap").fadeIn()
+    });
+    $("#close").click(function(){
+        $("#modal_wrap").fadeOut()
+    });
+    $("#modal_wrap").click(function(){
+        $("#modal_wrap").fadeOut()
+    });
+})
