@@ -1,0 +1,135 @@
+$(function(){
+	$('#gnb .depth1 li').mouseenter(function(){
+		$(this).children('.depth2').slideDown(300);	
+	});	
+	$('#gnb .depth1 li').mouseleave(function(){
+		$(this).children('.depth2').slideUp(300);	
+	});
+	//gnb 마우스 오버시 활성화
+	
+	$('#gnb > ul > li').clone().appendTo('.site_map_b ul.depth1');//사이트맵으로 메뉴 복사
+	$('#gnb > ul').clone().appendTo('#site_map .wrap .center_wrap');//사이트맵으로 메뉴 복사
+	$('#gnb > ul').clone().appendTo('#gnb_mobile .wrap');//모바일버전 메뉴복사
+	$('#gnb > ul > .active > a').clone().appendTo('.sub_visual dt');//서브 타이틀 복사
+	
+	$('#gnb > ul > .active > a').clone().appendTo('#lnb .depth1');
+	$('#gnb > ul > li > a').clone().appendTo('#lnb .depth1 .menu');
+	$('#gnb > ul > .active .depth2  .center_wrap .active a').clone().appendTo('#lnb .depth2 ');
+	$('#gnb .depth1 > .active .depth2  .center_wrap > li > a').clone().appendTo('#lnb .depth2 .menu');//lnb 복사
+	$('#gnb > ul > .active .depth3 .active a').clone().appendTo('#lnb .depth3');
+	$('#gnb   .active .depth3 li a').clone().appendTo('#lnb .depth3 .menu');//lnb 복사
+	
+	$('#gnb > ul > .active > a').clone().appendTo('#path');
+	$('#gnb > ul > .active .depth2 .active a').clone().appendTo('#path');//path복사
+	
+	
+	$('#site_map .btn_open').click(function(ev){
+		ev.preventDefault()
+		$('#site_map .wrap').show();
+	})
+	$('#footer .site_map').click(function(ev){
+		ev.preventDefault()
+		$('#site_map .wrap').show();
+	})
+	//사이트맵 열기
+	$('#site_map .btn_close').click(function(ev){
+		ev.preventDefault()
+		$('#site_map .wrap').hide();
+	})
+	//사이트맵 닫기
+	
+	$('#head .gnb_wrap .btn_bar').click(function(ev){
+		ev.preventDefault();
+		$('#gnb_mobile').addClass('open');
+		$('#gnb_mobile .bg').animate({opacity:.8},300);
+		$('#gnb_mobile .wrap').stop().animate({left:"0"});
+	})//gnb 활성
+	$('#gnb_mobile .btn_close').click(function(ev){
+		ev.preventDefault();
+		$('#gnb_mobile').removeClass('open');
+		$('#gnb_mobile .bg').animate({opacity:0},300);
+		$('#gnb_mobile .wrap').stop().animate({left:"-100em"});
+	})//gnb 비활성
+	$('#gnb_mobile .depth1 > li > a').click(function(ev){
+		ev.preventDefault();
+		$(this).siblings('.depth2').slideDown(300);
+		$(this).parent('li').addClass('open');
+		$(this).parent('li').siblings().children('.depth2').slideUp(300);
+		$(this).parent('li').siblings().removeClass('open');
+	})//depth2 메뉴 활성 비활성
+	
+	$('#lnb .menu_wrap').mouseenter(function(){
+		$(this).children('.menu').slideDown(300);	
+	});	
+	$('#lnb .menu_wrap').mouseleave(function(){
+		$(this).children('.menu').slideUp(300);	
+	});//lnb 마우스 오버시 활성화
+	
+	$('#tabs a').click(function(ev){
+  ev.preventDefault();
+  var idx = $(this).parent('li').index();
+  
+	$('#tabs li').removeClass('active');// - active 클래스명
+	$(this).parent('li').addClass('active');
+	$('.tabs_contents > div').removeClass('active');
+	$('.tabs_contents > div:eq('+idx+')').addClass('active');
+	})
+	//탭 활성 비활성
+	
+	$('.layer_pop .btn_close').click(function(ev){
+		ev.preventDefault();
+		$('.layer_pop').hide(300);
+	})
+	//레이어팝업 비활성
+	
+	$('.btn_access').click(function(ev){
+		ev.preventDefault();
+		$('#access').show(300);
+	})
+	//이용약관 활성
+	$('.btn_privacy').click(function(ev){
+		ev.preventDefault();
+		$('#privacy').show(300);
+	})
+	//개인정보취급방침 활성
+});
+
+
+$(function(){
+	$(".con_01_bt").click(function(){
+		$(".con_01_box").fadeIn("fast");
+	});
+	$(".con_01_close").click(function(){
+		$(".con_01_box").fadeOut("fast");
+	});
+	$(".con_02_bt").click(function(){
+		$(".con_02_box").fadeIn("fast");
+	});
+	$(".con_02_close").click(function(){
+		$(".con_02_box").fadeOut("fast");
+	});
+	$(".con_03_bt").click(function(){
+		$(".con_03_box").fadeIn("fast");
+	});
+	$(".con_03_close").click(function(){
+		$(".con_03_box").fadeOut("fast");
+	});
+	$(".con_04_bt").click(function(){
+		$(".con_04_box").fadeIn("fast");
+	});
+	$(".con_04_close").click(function(){
+		$(".con_04_box").fadeOut("fast");
+	});
+	$(".con_05_bt").click(function(){
+		$(".con_05_box").fadeIn("fast");
+	});
+	$(".con_05_close").click(function(){
+		$(".con_05_box").fadeOut("fast");
+	});
+	$(".con_06_bt").click(function(){
+		$(".con_06_box").fadeIn("fast");
+	});
+	$(".con_06_close").click(function(){
+		$(".con_06_box").fadeOut("fast");
+	});
+});

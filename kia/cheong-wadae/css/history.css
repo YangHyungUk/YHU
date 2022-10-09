@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+li{list-style: none;}
+a{text-decoration: none; color:black;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Roboto', sans-serif;}
+    li{list-style:none;color:inherit}
+body{color:#333333;font-size:15px;}
+img{width:100%;height:100%;display:block;}
+.clearfix::after{content:'';display:block;clear:both;}
+
+.wrap{width:100%;display:block; margin:0 auto;}
+/* header영역 */
+header{width:100%; height:120px;}
+
+#gnb{width:1300px; height:120px; margin:0 auto;}
+
+.logo{width:116px; height:120px; line-height: 120px; margin:0 auto; text-align: center; display: inline-block; margin-top:31px;}
+.logo a > img{width:116px; height:58px;}
+
+#left_gnb{width:592px; height:120px; float:left;}
+
+.search{width:24px; padding-top:48px;float:left;}
+.search li{width:100%;}
+.search li a > img{width:cover;}
+
+#menu1{float:right;}
+#menu1 > li{text-align:center; width:150px; height:120px; float:left; line-height: 120px;}
+#menu1 > li > a{font-size: 14px; font-weight: 500;}
+#menu1 > li:hover> a{color: rgb(80, 188, 231);}
+
+#right_gnb{width:592px; height:120px; float:right;}
+
+#menu2{float:left;}
+#menu2 > li{text-align:center; width:150px; height:120px; float:left; line-height: 120px;font-size: 14px;font-weight: 500;}
+#menu2 > li:hover> a{color: rgb(80, 188, 231);}
+
+#language{width:24px;padding-top:48px;float:right;}
+#language > li{text-align:center;float:left;}
+#language > li > a{font-size: 12px; font-weight: 500;}
+#language li a > img{width:cover;}
+/* header영역 */
+main{width:100%;}
+#title{width:100%; height:30px; margin: 0 auto; }
+#title > h2{text-align: center; font-size:25px; line-height: 30px; margin-top:150px;}
+
+#sect1{width:1200px; height:400px; margin:150px auto;}
+.photo1{width:700px; height:400px; float:left; background-image: url("../img/history1.jpg");}
+.text_cover1{width:500px; height:400px; float:left;}
+.text_box1{width:300px; height:300px; margin: 0 auto;}
+.text_box1 > h3{font-size: 25px; line-height: 48px; padding:25px 0 25px;}
+.text_box1 > p{font-size: 14px; line-height: 31px; text-align: justify; word-spacing: -2.5px;  padding-bottom: 25px;}
+
+#sect2{width:1200px; height:400px; margin:150px auto;}
+.photo2{width:700px; height:400px; float:left; background-image: url("../img/history2.jpg");}
+.text_cover2{width:500px; height:400px; float:left;}
+.text_box2{width:300px; height:300px; margin: 0 auto;}
+.text_box2 > h3{font-size: 25px; line-height: 48px; padding:25px 0 25px;}
+.text_box2 > p > span{font-size: 17px; line-height: 31px; padding-bottom: 25px;text-align: center; font-weight:medium;}
+.text_box2 > p{font-size: 14px; line-height: 31px; text-align: justify; word-spacing: -1px;  padding-bottom: 25px;}
+
+#sect3{width:100%; height:755px; margin:150px auto;}
+.text_cover3{width:1200px; height:305px;margin:0 auto;}
+.text_box3{width:1200px; height:305px; margin: 0 auto;}
+.text_box3 > h3{font-size: 25px; line-height: 48px; padding-bottom: 25px;text-align: center; }
+.text_box3 > p > span{font-size: 17px; line-height: 31px;text-align: center; font-weight:medium;}
+.text_box3 > p{font-size: 14px; line-height: 31px; text-align: center; text-justify:inter-word; word-spacing: 2px; padding-bottom: 25px;}
+.photo3{width:1200px; height: 450px; margin: 25px auto;background-image: url("../img/history3.jpg");}
+
+
+#sect4{width:1200px; height:400px; margin:150px auto;}
+.photo4{width:700px; height:400px; float:left; background-image: url("../img/history4.jpg");}
+.text_cover5{width:500px; height:400px; float:left;}
+.text_box5{width:300px; height:300px; margin: 0 auto;}
+.text_box5 > h3{font-size: 25px; line-height: 48px; padding:25px 0 25px;}
+.text_box5 > p{font-size: 14px; line-height: 31px; text-align: justify; word-spacing: -1px;padding-bottom: 25px;}
+
+
+#sect5{width:1200px; height: 585px; margin: 0 auto;}
+.photo5{width:1200px; height:400px; background-image: url("../img/history5.jpg");margin-top: 50px;}
+.text_box6 > h3{font-size: 25px; line-height: 48px; padding-bottom: 25px;}
+.text_box6 > p{font-size: 14px; line-height: 31px; text-align: justify; word-spacing: 1px; letter-spacing: -1px;}
+
+footer{background-color: #333333;width:100%; height:200px;margin-top: 150px;}
+.footer_box{width:1300px; height:100px;margin:0 auto; color:white;padding-top: 50px; position:relative}
+.footer_box > h3{font-size: 16px; font-weight: 500px; display: inline-block;}
+.info_contents{position: absolute;top:110px; font-size:15px; font-weight: 300;}
+.copyright{float:right; font-weight: 15px; padding-top:80px;}

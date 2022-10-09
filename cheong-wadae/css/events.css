@@ -1,83 +1,442 @@
 @charset "urf-8";
 
-*{margin:0; padding:0;}
-a{text-decoration: none; color:black;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;}
-    li{list-style:none;color:inherit}
-body{color:#333333;font-size:15px;}
-img{width:100%;height:100%;display:block;}
+/* 전체영역입니다 */
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+li{
+    list-style-type:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+body{
+    overflow-x:hidden;
+	color:#333333;
+}
+.clearfix::after{
+	content:'';
+	display:block;
+	clear:both;
+}
+/* 전체영역입니다 */
 
-/* header영역 */
-header{width:100%; height:120px;}
+/* header영역입니다 */
+header{
+    width:100%;
+    height:100px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.2);
+    background-color:#fff;
+    position:sticky;
+    top:0px;
+    z-index:9999;
+}
+.header_inner, .footer_inner{
+    width:1200px;
+    margin:0 auto;
+}
+#menu_box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:100px;
+    position:relative;
+}
+#search{
+    padding-top:3px;
+    cursor:pointer;
+    position:relative;
+    left:0;
+    width:250px;
+    height:30px;
+}
+.site-search{
+    position:absolute;
+    left:30px;
+    width:0px;
+    padding:3px 5px;
+    transition:all 1s;
+    opacity:0;
+    outline:none; 
+}
+.site-search.on{
+    width:150px;
+    opacity:1;
+}
+#menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+#menu1{
+    display:flex;
+    justify-content:space-between;
+}
+#menu1 > li{
+    padding:10px 20px;
+}
+#menu1 > li > a {
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:2px;
+}
+#menu1 > li:hover > a{
+    color:rgb(80, 188, 231);
+    transition:0.3s;
+}
+.logo{
+    padding:10px 20px;
+    width:116px;
+    height:58px;
+}
+#menu2{
+    display:flex;
+    justify-content:space-between;
+}
+#menu2 > li{
+    padding:10px 20px;
+}
+#menu2 > li > a {
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:2px;
+}
+#menu2 > li:hover > a{
+    color:rgb(80, 188, 231);
+    transition:0.3s;
+    
+}
+#language{
+    position:relative;
+    right:0;
+    width:250px;
+    height:100px;
+    
+}
+.language-img{
+    position:absolute;
+    right:0;
+    top:35px;
+}
+.language_box{
+    position:absolute;
+    top:70px;
+    right:0;
+}
+.language_menu{
+    padding:5px 10px;
+    float:left;
+    position:relative;
+    bottom:7px;
+    display:none;
+    text-align:center;
+}
+.language_menu.on{
+    display:block;
+}
+.language_menu>span{
+    cursor:pointer;
+    float:left;
+}
+.language_menu>span:hover{
+    color:rgb(80, 188, 231);
+    transition:0.3s;
+}
+.language_box span:last-child::before{
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:11px;
+    background-color:#333;
+    margin:0 8px;
+    
+}
+#moblie_logo{
+    display:none;
+}
+/* header영역입니다 */
 
-#gnb{width:1300px; height:120px; margin:0 auto;}
+#title{
+    width:100%; 
+    height:30px; 
+    margin:0 auto;
+}
+#title > h2{
+    text-align:center; 
+    font-size:25px; 
+    line-height:30px; 
+    margin-top:150px;
+}
 
-.logo{width:116px; height:120px; line-height: 120px; margin:0 auto; text-align: center; display: inline-block; margin-top:31px;}
-.logo a > img{width:116px; height:58px;}
+#main_benner{ 
+    width:1200px; 
+    height:960px;  
+    margin:0 auto;
+    position:relative; 
+    margin:180px auto;
+}
+#main_box{
+    overflow:hidden; 
+    width:1200px; 
+    height:700px; 
+    margin-bottom:10px;
+}
+.container{
+    width:3600px; 
+    height:700px;
+    margin:0 auto; 
+    transition:transform 0.5s; 
+    margin-bottom:10px;
+}
+.inner{
+    width:1200px; 
+    height:700px; 
+    float:left;
+}
+.inner img{
+    width:100%;
+}
 
-#left_gnb{width:592px; height:120px; float:left;}
-
-.search{width:24px; padding-top:48px;float:left;}
-.search li{width:100%;}
-.search li a > img{width:cover;}
-
-#menu1{float:right;}
-#menu1 > li{text-align:center; width:150px; height:120px; float:left; line-height: 120px;}
-#menu1 > li > a{font-size: 14px; font-weight: 500;}
-#menu1 > li:hover> a{color: rgb(80, 188, 231);}
-
-#right_gnb{width:592px; height:120px; float:right;}
-
-#menu2{float:left;}
-#menu2 > li{text-align:center; width:150px; height:120px; float:left; line-height: 120px;font-size: 14px;font-weight: 500;}
-#menu2 > li:hover> a{color: rgb(80, 188, 231);}
-
-#language{width:24px;padding-top:48px;float:right;}
-#language > li{text-align:center;float:left;}
-#language > li > a{font-size: 12px; font-weight: 500;}
-#language li a > img{width:cover;}
-
-/* header영역 */
-
-#title{width:100%; height:30px; margin: 0 auto;}
-#title > h2{text-align: center; font-size:25px; line-height: 30px; margin-top:150px;}
-
-
-
-
-#main_benner{ width:1200px; height:960px;  margin: 0 auto; position: relative; margin: 180px auto;}
-#main_box{overflow: hidden; width:1200px; height:700px; margin-bottom: 10px;}
-.container{width:3600px; height:700px; margin: 0 auto; transition:transform 0.5s; margin-bottom: 10px;}
-.inner{width: 1200px; height:700px; float:left;}
-.inner img{width:100%;}
-
-.photo1,.photo2,.photo3{width:393.33px; height:250px; background-color: #333333;float:left; margin-right:10px; cursor: pointer; overflow: hidden;}
-.photo3{margin-right:-10px;}
-.photo1>img{width:cover; height: cover;}
-
-
-
-
-#tour_info{width:1200px; height:500px; margin:180px auto;}
-#left_box{width:600px; height:500px; float:left;}
-#right_box{width:600px; height:500px; float:left;}
-
-#open_time{width:500px; height:180px; margin-bottom:150px;}
-#open_time > h4{font-size: 24px; line-height: 24px;margin-bottom: 25px;}
-#open_time > p{font-size: 14px; line-height: 31px;}
-
-#Event_venues{width:500px; height:150px;float:left;}
-#Event_venues > h4{font-size: 24px; line-height: 24px;margin-bottom: 25px;}
-#Event_venues > p{font-size: 14px; line-height: 31px;}
-
-.text{width:500px; height:500px; float:right;}
-.text > p{font-size: 16px; line-height: 33px; text-align: justify; letter-spacing: -1px; word-spacing: -1px; }
-.text > p:not(:nth-child(4)){padding-bottom:25px;}
+.photo1,
+.photo2,
+.photo3{
+    width:393.33px; 
+    height:250px; 
+    background-color:#333333;
+    float:left; 
+    margin-right:10px; 
+    cursor:pointer; 
+    overflow:hidden;
+}
+.photo3{
+    margin-right:-10px;
+}
+.photo1>img, 
+.photo2>img, 
+.photo3>img{
+    width:100%; 
+    height:100%;
+    display:block;
+}
 
 
-footer{background-color: #333333;width:100%; height:200px; margin-top: 150px;}
-.footer_box{width:1300px; height:100px;margin:0 auto; color:white;padding-top: 50px; position:relative}
-.footer_box > h3{font-size: 16px; font-weight: 500px; display: inline-block;}
-.info_contents{position: absolute;top:110px; font-size:15px; font-weight: 300;}
-.copyright{float:right; font-weight: 15px; padding-top:80px;}
+#tour_info{
+    width:1200px; 
+    height:500px;
+    margin:180px auto;
+}
+#left_box{
+    width:600px; 
+    height:500px; 
+    float:left;
+}
+#right_box{
+    width:600px; 
+    height:500px; 
+    float:left;
+}
+
+#open_time{
+    width:500px; 
+    height:180px; 
+    margin-bottom:150px;
+}
+#open_time > h4{
+    font-size:24px; 
+    line-height:24px;
+    margin-bottom:25px;
+}
+#open_time > p{
+    font-size:14px; 
+    line-height:31px;
+}
+
+#Event_venues{
+    width:500px; 
+    height:150px;
+    float:left;
+}
+#Event_venues > h4{
+    font-size:24px; 
+    line-height:24px;
+    margin-bottom:25px;
+}
+#Event_venues > p{
+    font-size:14px; 
+    line-height:31px;
+}
+
+.text{
+    width:500px; 
+    height:500px; 
+    float:right;
+}
+.text > p{
+    font-size:16px; 
+    line-height:33px; 
+    text-align:justify; 
+    letter-spacing:-1px;
+     word-spacing:-1px; 
+    }
+.text > p:not(:nth-child(4)){
+    padding-bottom:25px;
+}
+
+
+/* footer영역입니다 */
+footer{
+    background-color:#333333;
+    color:#ffffff;
+}
+.footer_box{
+    padding:20px 0;
+}
+.contact_info{
+    font-size:16px;
+    padding:10px 0;
+    
+    letter-spacing:1px;
+}
+.info_contents{
+    font-size:14px;
+    padding:10px 0;
+    float:left;
+    font-weight:300;
+    letter-spacing:1px;
+}
+.copyright{
+    font-size:12px;
+    padding:30px 0 10px;
+    float:right;
+    font-weight:300;
+    letter-spacing:1px;
+}
+
+/*데스크탑에서 모바일메뉴영역 감추기*/
+#moblie-menu-area{
+    display:none;
+}
+.moblie_logo{
+    display:none;
+}
+/*햄버거 메뉴디자인 */
+#moblie-open{
+    display:none;
+    width:35px;
+    height:40px;
+    position:absolute;
+    top:30px;
+    right:10px;
+    cursor:pointer;
+}
+.bar1, .bar2, .bar3{
+    width:35px;
+    height:5px;
+    background-color:#333;
+    margin:6px 0;
+}
+/* 부모요소(#btn)에 change가 붙여지면 자식요소 bar1, bar2, bar3에 각각 트랜지션스타일 준다 css 버튼 */
+#moblie-open.on .bar1{
+    transform:rotate(-225deg) translate(9px, -8px);
+}
+#moblie-open.on .bar2{
+    opacity:0;
+}
+#moblie-open.on .bar3{
+    transform:rotate(225deg) translate(8px, 6px);
+}
+
+@media all and (max-width:600px){
+    .inner{
+        width:100%;
+    }
+
+    /* header영역입니다 */
+    header{
+        width:100%;
+        height:100px;
+        line-height:100px;
+        border-bottom:1px solid rgba(0, 0, 0, 0.2);
+
+    }
+    #menu_box{
+        display:none;
+    }
+    #moblie-menu-area{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        position:relative;
+        top:100px;
+    }
+    .moblie_logo{
+        position:absolute;
+        background:url("../img/logo.png") no-repeat;
+        background-size:cover;
+        width:116px;
+        height:58px;
+        text-indent:-9999px;
+        z-index:999;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    .moblie_logo a{
+        z-index:999;
+        height:58px;
+    }
+    #moblie-open{
+        display:block;
+    }
+    #moblie_menu{
+        display:none;
+        width:100%;
+        background-color:#fff;
+    }
+    #moblie_menu li{
+        text-align:center;
+		border-bottom:1px solid #ededed;
+        border-top:1px solid #ededed;
+    }
+    #moblie_menu li a{
+		font-size:15px;
+		color:#555;
+		font-weight:600;
+    }
+    #moblie_menu li:hover a{
+        color:rgb(80, 188, 231);
+        transition:0.3s;
+    }
+    .moblie_logo{
+        display:block;
+    }
+    /* header영역입니다 */
+
+    /* footer영역입니다 */
+    .contact_info{
+        width:100%;
+        text-align:center;
+    }
+    .info_contents{
+        width:100%;
+        text-align:center;
+    }
+    .copyright{
+        float:none;
+        width:100%;
+        text-align:center;
+        padding:10px 0;
+    }
+    .footer_inner{
+        width:100%;
+    }
+    /* footer영역입니다 */
+
+}

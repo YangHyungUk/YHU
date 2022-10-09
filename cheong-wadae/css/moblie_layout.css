@@ -1,0 +1,212 @@
+@charset "urf-8";
+
+/*데스크탑에서 모바일메뉴영역 감추기*/
+#moblie-menu-area{
+    display:none;
+}
+.moblie_logo{
+    display:none;
+}
+/*햄버거 메뉴디자인 */
+#moblie-open{
+    display:none;
+    width:35px;
+    height:40px;
+    position:absolute;
+    top:30px;
+    right:10px;
+    cursor:pointer;
+}
+.bar1, .bar2, .bar3{
+    width:35px;
+    height:5px;
+    background-color:#333;
+    margin:6px 0;
+}
+/* 부모요소(#btn)에 change가 붙여지면 자식요소 bar1, bar2, bar3에 각각 트랜지션스타일 준다 css 버튼 */
+#moblie-open.on .bar1{
+    transform:rotate(-225deg) translate(9px, -8px);
+}
+#moblie-open.on .bar2{
+    opacity:0;
+}
+#moblie-open.on .bar3{
+    transform:rotate(225deg) translate(8px, 6px);
+}
+
+@media all and (max-width:600px){
+    .inner{
+        width:100%;
+    }
+
+    /* header영역입니다 */
+    header{
+        width:100%;
+        height:100px;
+        line-height:100px;
+        border-bottom:1px solid rgba(0, 0, 0, 0.2);
+
+    }
+    #menu_box{
+        display:none;
+    }
+    #moblie-menu-area{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        position:relative;
+        top:100px;
+    }
+    .moblie_logo{
+        position:absolute;
+        background:url("../img/logo.png") no-repeat;
+        background-size:cover;
+        width:116px;
+        height:58px;
+        text-indent:-9999px;
+        z-index:999;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    .moblie_logo a{
+        z-index:999;
+        height:58px;
+    }
+    #moblie-open{
+        display:block;
+    }
+    #moblie_menu{
+        display:none;
+        width:100%;
+        background-color:#fff;
+    }
+    #moblie_menu li{
+        text-align:center;
+		border-bottom:1px solid #ededed;
+        border-top:1px solid #ededed;
+    }
+    #moblie_menu li a{
+		font-size:15px;
+		color:#555;
+		font-weight:600;
+    }
+    #moblie_menu li:hover a{
+        color:rgb(80, 188, 231);
+        transition:0.3s;
+    }
+    .moblie_logo{
+        display:block;
+    }
+    /* header영역입니다 */
+    .text_box{
+        position:absolute;
+        right:50px;
+        top:80px;
+        width: 100%;
+        height:100%;
+    }
+    .main_text h2{
+        color:#fff;
+        font-size: 35px;
+        font-weight: 700;
+    }
+    .main_text span{
+        color:#fff;
+        font-size:20px;
+        font-weight: 500;
+    }
+    #slide-content{
+        display:none;
+    }
+    /* info영역입니다 */
+    .title{
+        width:100%;
+        padding:100px 0 50px;
+    }
+    .info{
+        width:100%;
+    }
+    .info_photo{
+        width:100%;
+    }
+    .box{
+        float:none;
+        width:80%;
+        margin:0 auto;
+        margin-bottom:20px;
+    }
+    .box:nth-child(1){
+        margin:0 auto;
+        margin-bottom:20px;
+    }
+    .box:nth-child(3){
+        margin-bottom:0px;
+    }
+    /* info영역입니다 */
+    /* event영역입니다 */
+    #event{
+        padding-top:100px;
+    }
+    .event_box{
+        width:100%;
+        height:350px;
+    }
+    .events_1{
+        width:100%;
+        height:100%;
+        left:0;
+    }
+    .event_text{
+        width:400px;
+        position:absolute;
+        top:65%;
+        left:50%;
+        transform:translate(-50%,-65%);
+    }
+    .event_text>p{
+        font-size:17px;
+        line-height:30px;  
+        color:#333;
+        text-align:center;
+        background-color:rgba(255, 255, 255, 0.6);
+        padding:10px;
+    }
+    /* event영역입니다 */
+    /* media영역입니다 */
+    .media_wrap>a{
+        font-size:20px;
+    }
+    /* media영역입니다 */
+    /* histoty영역입니다 */
+    .history_bg{
+        height:400px;
+    }
+    .history_text > h3{
+        font-size:1.5rem;
+        color:#fff;
+    }
+    .history_text>p{
+        width:400px;
+        font-size:1rem;
+        margin-top:10px;
+        color:#fff;
+    }
+    /* histoty영역입니다 */
+    /* footer영역입니다 */
+    .contact_info{
+       width:100%;
+       text-align:center;
+    }
+    .info_contents{
+        width:100%;
+        text-align:center;
+    }
+    .copyright{
+        float:none;
+        width:100%;
+        text-align:center;
+        padding:10px 0;
+    }
+    /* footer영역입니다 */
+}

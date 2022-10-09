@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://www.woolim.com/main/main.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>우림건설</title>
+<script src="./우림건설_files/jquery-1.12.4.min.js.다운로드"></script>
+<script src="./우림건설_files/common.js.다운로드"></script>
+<script src="./우림건설_files/magnific-popup.css"></script>
+<script src="./우림건설_files/jquery.magnific-popup.min.js.다운로드"></script>
+<script type="text/javascript" src="./우림건설_files/sdk.js.다운로드"></script><script charset="UTF-8" src="./우림건설_files/kakao.js.다운로드"></script><script charset="UTF-8" src="./우림건설_files/services.js.다운로드"></script>
+<link rel="stylesheet" type="text/css" href="./우림건설_files/layout.css">
+<link rel="stylesheet" type="text/css" href="./우림건설_files/pop.css">
+<script src="./우림건설_files/jquery.flexslider.js.다운로드"></script>
+<script src="./우림건설_files/main.js.다운로드"></script>
+<link rel="stylesheet" type="text/css" href="./우림건설_files/flexslider.css">
+<link rel="stylesheet" type="text/css" href="./우림건설_files/main.css">
+<!--[if lt IE 9]>
+<script src="../js/respond.min.js"></script>
+<script src="../js/html5.js"></script>
+<script src="../js/selectivizr-min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/ie8.css">
+<![endif]-->
+<script src="./우림건설_files/function.js.다운로드"></script>
+<script>
+
+function fnMapShow(addrTxt, addrTit, divId){
+	var mapContainer = document.getElementById(divId), // 지도를 표시할 div 
+		mapOption = {
+			center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+			level: 3 // 지도의 확대 레벨
+		};  
+
+	// 지도를 생성합니다    
+	var map = new daum.maps.Map(mapContainer, mapOption); 
+
+	// 주소-좌표 변환 객체를 생성합니다
+	var geocoder = new daum.maps.services.Geocoder();
+
+	// 주소로 좌표를 검색합니다
+	geocoder.addressSearch(addrTxt, function(result, status) {
+
+		// 정상적으로 검색이 완료됐으면 
+		 if (status === daum.maps.services.Status.OK) {
+
+			var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+
+			// 결과값으로 받은 위치를 마커로 표시합니다
+			var marker = new daum.maps.Marker({
+				map: map,
+				position: coords
+			});
+
+			// 인포윈도우로 장소에 대한 설명을 표시합니다
+			var infowindow = new daum.maps.InfoWindow({
+				content: '<div style="width:150px;text-align:center;padding:6px 0;">'+addrTit+'</div>'
+			});
+			infowindow.open(map, marker);
+
+			// 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+			map.setCenter(coords);
+		} 
+	});  	
+}
+
+</script>
+
+
+</head>
+<body>
+
+<div class="body_wrap" style="position:relative">
+	<!-- 레이어 팝업 배경 -->
+	<div class="bg-bx-wh"></div>
+	<!-- 레이어 팝업 배경 -->
+
+	<!-- 레이어 팝업 배경 -->
+	<div class="dim-layer">
+		<div class="dimBg"></div>
+	</div>
+	<!-- 레이어 팝업 배경 -->
+
+<div id="head" style="z-index:20">
+		<div class="gnb_wrap">
+			<div class="center_wrap">
+				<a href="http://www.woolim.com/main/main.php#" class="btn_bar"><img src="./우림건설_files/btn_bar.png"></a>
+				<h1 class="logo"><a href="http://www.woolim.com/"><img src="./우림건설_files/logo.png" class="pc"></a></h1>
+			</div>
+		<div>
+		
+			<div id="gnb">
+				<ul class="depth1">
+					<li class="">
+						<a href="http://www.woolim.com/company/greeting.php">회사소개</a>
+						<ul class="depth2 sm01">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/company/greeting.php">인사말</a></li>
+								<li class=""><a href="http://www.woolim.com/company/philosophy.php">기업이념</a></li>
+								<li class=""><a href="http://www.woolim.com/company/history.php">주요연혁</a></li>
+								<li class=""><a href="http://www.woolim.com/company/organization.php">조직도</a></li>
+								<li class=""><a href="http://www.woolim.com/company/map.php">오시는 길</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/business/business1.php">사업소개</a>
+						<ul class="depth2 sm02">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/business/business1.php">주택사업</a></li>
+								<li class=""><a href="http://www.woolim.com/business/business2.php">건축사업</a></li>
+								<li class=""><a href="http://www.woolim.com/business/business3.php">토목사업</a></li>
+								<li class=""><a href="http://www.woolim.com/business/business4.php">해외사업</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/plan/plan1.php">지속가능경영</a>
+						<ul class="depth2 sm03">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/plan/plan1.php">윤리경영</a></li>
+								<li class=""><a href="http://www.woolim.com/plan/plan2.php">품질경영</a></li>
+								<li class=""><a href="http://www.woolim.com/plan/plan3.php">안전/환경경영</a></li>
+								<li class=""><a href="http://www.woolim.com/plan/plan4.php">사이버감사실</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/sale/sale1.php">분양정보</a>
+						<ul class="depth2 sm04" style="display: none;">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/sale/sale1.php">분양캘린더</a></li>
+								<li class=""><a href="http://www.woolim.com/sale/sale2.php">분양중인 단지</a></li>
+								<li class=""><a href="http://www.woolim.com/sale/sale3.php">분양예정 단지</a></li>
+								<li class=""><a href="http://www.woolim.com/sale/sale4.php">분양완료 단지</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/info/info1.php">현장/입주정보</a>
+						<ul class="depth2 sm05" style="display: none;">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/info/info1.php">공사단지</a>
+									<ul class="depth3">
+										<li class=""><a href="http://www.woolim.com/info/info1.php">현장개요 및 공정률</a></li>
+										<li class=""><a href="http://www.woolim.com/info/info101.php">공정사진 및 내역</a></li>
+									</ul>
+								</li>
+								<li class=""><a href="http://www.woolim.com/info/info2.php">입주단지</a></li>
+								<li class=""><a href="http://www.woolim.com/info/info3.php">입주가이드</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/promotion/promotion1.php">홍보마당</a>
+						<ul class="depth2 sm06" style="display: none;">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/promotion/promotion1.php">우림뉴스</a></li>
+								<li class=""><a href="http://www.woolim.com/promotion/promotion2.php">CI소개</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/cscenter/cscenter1.php">고객센터</a>
+						<ul class="depth2 sm07">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter1.php">고객문의</a></li>
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter2.php">사업문의</a></li>
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter3.php">채용문의</a></li>
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter4.php">A/S문의</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class=" none">
+						<a href="http://www.woolim.com/sale/sale_write.php" class="none">관심고객 등록</a>
+					</li>
+					<li class=" none">
+						<a href="http://www.woolim.com/etc/email.php" class="none">이메일무단수집거부</a>
+					</li>
+					<li class=" none">
+						<a href="http://www.woolim.com/etc/private.php" class="none">개인정보취급방침</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="site_map" class="allmenu">
+				<div class="box center_wrap">
+				<a href="http://www.woolim.com/main/main.php#" class="btn_home"><img src="./우림건설_files/btn_home.png" alt="사이트맵"></a>
+				<a href="http://www.woolim.com/main/main.php#" class="btn_open"><img src="./우림건설_files/btn_sitemap.png" alt="사이트맵"></a>
+				</div>
+				<div class="wrap">
+					<div class="center_wrap">
+					<a href="http://www.woolim.com/main/main.php#" class="btn_close"><img src="./우림건설_files/site_map_closed.png" alt="닫기"></a>
+					<!--common.js로 메뉴 복사-->
+					<ul class="depth1">
+					<li class="">
+						<a href="http://www.woolim.com/company/greeting.php">회사소개</a>
+						<ul class="depth2 sm01">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/company/greeting.php">인사말</a></li>
+								<li class=""><a href="http://www.woolim.com/company/philosophy.php">기업이념</a></li>
+								<li class=""><a href="http://www.woolim.com/company/history.php">주요연혁</a></li>
+								<li class=""><a href="http://www.woolim.com/company/organization.php">조직도</a></li>
+								<li class=""><a href="http://www.woolim.com/company/map.php">오시는 길</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/business/business1.php">사업소개</a>
+						<ul class="depth2 sm02">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/business/business1.php">주택사업</a></li>
+								<li class=""><a href="http://www.woolim.com/business/business2.php">건축사업</a></li>
+								<li class=""><a href="http://www.woolim.com/business/business3.php">토목사업</a></li>
+								<li class=""><a href="http://www.woolim.com/business/business4.php">해외사업</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/plan/plan1.php">지속가능경영</a>
+						<ul class="depth2 sm03">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/plan/plan1.php">윤리경영</a></li>
+								<li class=""><a href="http://www.woolim.com/plan/plan2.php">품질경영</a></li>
+								<li class=""><a href="http://www.woolim.com/plan/plan3.php">안전/환경경영</a></li>
+								<li class=""><a href="http://www.woolim.com/plan/plan4.php">사이버감사실</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/sale/sale1.php">분양정보</a>
+						<ul class="depth2 sm04">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/sale/sale1.php">분양캘린더</a></li>
+								<li class=""><a href="http://www.woolim.com/sale/sale2.php">분양중인 단지</a></li>
+								<li class=""><a href="http://www.woolim.com/sale/sale3.php">분양예정 단지</a></li>
+								<li class=""><a href="http://www.woolim.com/sale/sale4.php">분양완료 단지</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/info/info1.php">현장/입주정보</a>
+						<ul class="depth2 sm05">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/info/info1.php">공사단지</a>
+									<ul class="depth3">
+										<li class=""><a href="http://www.woolim.com/info/info1.php">현장개요 및 공정률</a></li>
+										<li class=""><a href="http://www.woolim.com/info/info101.php">공정사진 및 내역</a></li>
+									</ul>
+								</li>
+								<li class=""><a href="http://www.woolim.com/info/info2.php">입주단지</a></li>
+								<li class=""><a href="http://www.woolim.com/info/info3.php">입주가이드</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/promotion/promotion1.php">홍보마당</a>
+						<ul class="depth2 sm06">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/promotion/promotion1.php">우림뉴스</a></li>
+								<li class=""><a href="http://www.woolim.com/promotion/promotion2.php">CI소개</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class="">
+						<a href="http://www.woolim.com/cscenter/cscenter1.php">고객센터</a>
+						<ul class="depth2 sm07">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter1.php">고객문의</a></li>
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter2.php">사업문의</a></li>
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter3.php">채용문의</a></li>
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter4.php">A/S문의</a></li>
+							</div>
+						</ul>
+					</li>
+					<li class=" none">
+						<a href="http://www.woolim.com/sale/sale_write.php" class="none">관심고객 등록</a>
+					</li>
+					<li class=" none">
+						<a href="http://www.woolim.com/etc/email.php" class="none">이메일무단수집거부</a>
+					</li>
+					<li class=" none">
+						<a href="http://www.woolim.com/etc/private.php" class="none">개인정보취급방침</a>
+					</li>
+				</ul></div>
+				</div>
+			</div>
+			<!--div id="gnb_mobile">
+				<div class="wrap">
+					<h1 class="logo"><img src="../img/common/logo_mobile.png" class="mobile"><a href="#" class="btn_close"><img src="../img/common/site_map_closed.png"></a></h1>
+				</div>
+				<div class="bg"></div>
+			</div-->
+			
+		</div>
+	</div>
+</div>
+<!--메인 비주얼-->
+<div class="main_visual">
+	<ul class="slides">
+ 		<li class="flex-active-slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"><img src="./우림건설_files/20190131185533_.jpg" class="pc" draggable="false"> <img src="./우림건설_files/20190131185533_.jpg" class="mobile" draggable="false"> </li>
+
+ <li data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><img src="./우림건설_files/20190131185523_.jpg" class="pc" draggable="false"> <img src="./우림건설_files/20190131185523_.jpg" class="mobile" draggable="false"> </li>
+
+ <li data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><img src="./우림건설_files/20190131185515_.jpg" class="pc" draggable="false"> <img src="./우림건설_files/20190131185515_.jpg" class="mobile" draggable="false"> </li>
+
+  		<!--<li><img src="../img/main/main_visual1.jpg"></li>
+		<li><img src="../img/main/main_visual1.jpg"></li>
+		<li><img src="../img/main/main_visual1.jpg"></li>-->
+	</ul>
+<ol class="flex-control-nav flex-control-paging"><li><a href="http://www.woolim.com/main/main.php#" class="flex-active">1</a></li><li><a href="http://www.woolim.com/main/main.php#">2</a></li><li><a href="http://www.woolim.com/main/main.php#">3</a></li></ol></div>
+
+
+<div class="m_info">
+	<div class="center_wrap">
+		<h3> <span>우림건설 분양정보</span>
+			분양정보<div class="line"></div>
+		</h3>
+	<img src="./우림건설_files/main_tit_bg.jpg" class="tit_bg">
+		<ul>
+				<li>
+		<div class="img_box">
+			<img src="./우림건설_files/20190425084436_.jpg" style="width:388px;height:388px;cursor:pointer" onclick="javascript:fnGoSaleView(&#39;../sale/sale2.php?idx=53&amp;tab_no_one=0&amp;tab_no_two=0&amp;typ=view&#39;);">
+			<a href="http://www.woolim.com/sale/sale2.php?idx=53&amp;tab_no_one=0&amp;tab_no_two=0&amp;typ=view"><img src="./우림건설_files/btn_more.png"> 자세히보기</a>
+			<a href="http://www.woolim.com/sale/sale_write.php?sale_idx=53"><img src="./우림건설_files/btn_more01.png"> 관심고객등록</a>
+		</div>
+		<div class="con">
+			<p>분야완료</p>
+			<span class="ellipsis_one ">한강 옥수 우림필유</span>
+			<dl>
+				<dt>위치</dt>
+				<dd class="ellipsis_one vt_bottom">서울특별시 성동구 옥수동 306번지 일원</dd>
+			</dl>
+			<dl>
+				<dt>세대수</dt>
+				<dd class="ellipsis_one vt_bottom">총 593세대 지하5층~지상34층 4개동(장기전세주택 158세대포함)</dd>
+			</dl>
+		</div>
+	</li>
+	 
+	<li>
+		<div class="img_box">
+			<img src="./우림건설_files/20190203165852_.jpg" style="width:388px;height:388px;cursor:pointer" onclick="javascript:fnGoSaleView(&#39;../sale/sale2.php?idx=12&amp;tab_no_one=0&amp;tab_no_two=0&amp;typ=view&#39;);">
+			<a href="http://www.woolim.com/sale/sale2.php?idx=12&amp;tab_no_one=0&amp;tab_no_two=0&amp;typ=view"><img src="./우림건설_files/btn_more.png"> 자세히보기</a>
+			<a href="http://www.woolim.com/sale/sale_write.php?sale_idx=12"><img src="./우림건설_files/btn_more01.png"> 관심고객등록</a>
+		</div>
+		<div class="con">
+			<p>2020년 주택홍보관 오픈예정</p>
+			<span class="ellipsis_one ">수원역 웨스트파크 원 우림필유</span>
+			<dl>
+				<dt>위치</dt>
+				<dd class="ellipsis_one vt_bottom">경기 수원시 권선구 서둔동 45-13 일원</dd>
+			</dl>
+			<dl>
+				<dt>세대수</dt>
+				<dd class="ellipsis_one vt_bottom">936세대(59A㎡ 339세대 / 59B㎡ 320세대 / 59C㎡ 59세대 / 84㎡ 218세대)</dd>
+			</dl>
+		</div>
+	</li>
+	 
+	<li>
+		<div class="img_box">
+			<img src="./우림건설_files/20190408124817_.jpg" style="width:388px;height:388px;cursor:pointer" onclick="javascript:fnGoSaleView(&#39;../sale/sale2.php?idx=41&amp;tab_no_one=0&amp;tab_no_two=0&amp;typ=view&#39;);">
+			<a href="http://www.woolim.com/sale/sale2.php?idx=41&amp;tab_no_one=0&amp;tab_no_two=0&amp;typ=view"><img src="./우림건설_files/btn_more.png"> 자세히보기</a>
+			<a href="http://www.woolim.com/sale/sale_write.php?sale_idx=41"><img src="./우림건설_files/btn_more01.png"> 관심고객등록</a>
+		</div>
+		<div class="con">
+			<p>2020년 모델하우스 오픈예정</p>
+			<span class="ellipsis_one ">부산 용당동 우림 필유</span>
+			<dl>
+				<dt>위치</dt>
+				<dd class="ellipsis_one vt_bottom">부산시 남구 용당동 238-1번지 일원</dd>
+			</dl>
+			<dl>
+				<dt>세대수</dt>
+				<dd class="ellipsis_one vt_bottom">세대수 758세대(B2~30 10개동</dd>
+			</dl>
+		</div>
+	</li>
+	 
+  			<!--
+			<li>
+				<div class="img_box">
+					<img src="../img/main/m_thumnail.jpg">
+					<a href=""><img src="../img/main/btn_more.png"> 자세히보기</a>
+					<a href=""><img src="../img/main/btn_more01.png"> 관심고객등록</a>
+				</div>
+				<div class="con">
+					<p>2018년 9월 14일 분양홍보관 오픈</p>
+					<span>부천 심곡 우림필유</span>
+					<dl>
+						<dt>위치</dt>
+						<dd>경기 부천시 심곡동 36-1 외 1필지</dd>
+					</dl>
+					<dl>
+						<dt>세대수</dt>
+						<dd>73세대</dd>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="img_box">
+					<img src="../img/main/m_thumnail.jpg">
+					<a href=""><img src="../img/main/btn_more.png"> 자세히보기</a>
+					<a href=""><img src="../img/main/btn_more01.png"> 관심고객등록</a>
+				</div>
+				<div class="con">
+					<p>2018년 9월 14일 분양홍보관 오픈</p>
+					<span>부천 심곡 우림필유</span>
+					<dl>
+						<dt>위치</dt>
+						<dd>경기 부천시 심곡동 36-1 외 1필지</dd>
+					</dl>
+					<dl>
+						<dt>세대수</dt>
+						<dd>73세대</dd>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="img_box">
+					<img src="../img/main/m_thumnail.jpg">
+					<a href=""><img src="../img/main/btn_more.png"> 자세히보기</a>
+					<a href=""><img src="../img/main/btn_more01.png"> 관심고객등록</a>
+				</div>
+				<div class="con">
+					<p>2018년 9월 14일 분양홍보관 오픈</p>
+					<span>부천 심곡 우림필유</span>
+					<dl>
+						<dt>위치</dt>
+						<dd>경기 부천시 심곡동 36-1 외 1필지</dd>
+					</dl>
+					<dl>
+						<dt>세대수</dt>
+						<dd>73세대</dd>
+					</dl>
+				</div>
+			</li>
+			-->
+		</ul>
+	</div>
+</div>
+
+
+<div class="m_business">
+	<div class="center_wrap">
+		<h3> <span>우림건설 사업소개</span>
+			주요사업<div class="line"></div>
+		</h3>
+	</div>
+	<div class="box">
+		<a href="http://www.woolim.com/business/business1.php"><p>주택사업</p><div class="bt">자세히보기</div></a>
+		<a href="http://www.woolim.com/business/business2.php"><p>건축사업</p><div class="bt">자세히보기</div></a>
+		<a href="http://www.woolim.com/business/business3.php"><p>토목사업</p><div class="bt">자세히보기</div></a>
+		<a href="http://www.woolim.com/business/business4.php"><p>해외사업</p><div class="bt">자세히보기</div></a>
+	</div>
+</div>
+
+
+<div class="main_banner">
+	<span>기업이념</span>
+	<p>우림은 남다른 열정과 도전정신으로 세계속의 <br>초일류 기업으로 힘차게 도약하겠습니다.</p>
+	<a href="http://www.woolim.com/company/greeting.php">회사소개 바로가기</a>
+</div>
+
+
+
+<div class="m_news">
+	<div class="center_wrap">
+		<h3> <span>우림뉴스</span>
+			우림뉴스<div class="line"></div>
+		</h3>
+	<img src="./우림건설_files/main_tit_bg01.jpg" class="tit_bg">
+		<ul>
+			 <li>
+	<a href="http://www.woolim.com/promotion/promotion1.php?idx=54&amp;typ=view" class="box">
+				<div class="txt">		<p>부천시 원미동 가로주택정비사업 시공사 선정</p></div>
+		<span>- 우림건설, 원미 반도한양 가로주택정비사업 시공사 선정&nbsp;  우림건설은 2019년 4월 27일 원미 반도한양 가로주택정비사업 토지등소유자 전체회의에서 시공사로 선정되었다.</span>
+		<div class="date"></div>
+	</a>
+</li>  
+ <li>
+	<a href="http://www.woolim.com/promotion/promotion1.php?idx=1&amp;typ=view" class="box">
+				<div class="txt">		<p>부천시 심곡동 '우림필유 ' 아파트 본계약 완료</p></div>
+		<span>- 우림건설, 부천시 심곡동 36-1번지 일원에서 분양중인 '우림필유'아파트 전 세대 본계약 완료&nbsp;&nbsp;&nbsp;우림건설은 2018년 9월 14일 부천시 중동 11</span>
+		<div class="date"></div>
+	</a>
+</li>  
+ 				
+			
+		</ul>
+	</div>
+</div>
+ 
+<div class="m_customer">
+	<div class="center_wrap">
+		<h3> <span>우림 고객센터</span>
+			고객센터<div class="line"></div>
+		</h3>
+		<ul>
+			<li>
+				<a href="http://www.woolim.com/cscenter/cscenter1.php" class="box">
+					<img src="./우림건설_files/banner_icon01.png">
+					<p>고객문의</p>
+					<span>궁금하신 점이 있으시면 <br>무엇이든 물어보세요.</span>
+					<div class="bt">바로가기  →</div>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.woolim.com/cscenter/cscenter2.php" class="box">
+					<img src="./우림건설_files/banner_icon02.png">
+					<p>사업문의</p>
+					<span>사업에 관련된 문의사항이 <br> 있으시면, 무엇이든 물어보세요.</span>
+					<div class="bt">바로가기  →</div>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.woolim.com/cscenter/cscenter3.php" class="box">
+					<img src="./우림건설_files/banner_icon03.png">
+					<p>채용문의</p>
+					<span>채용에 관련된 문의사항이  <br>있으시면,  무엇이든 물어보세요.</span>
+					<div class="bt">바로가기  →</div>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.woolim.com/cscenter/cscenter4.php" class="box">
+					<img src="./우림건설_files/banner_icon04.png">
+					<p>AS문의</p>
+					<span>투명하고 공정한 기업문화 정착에  <br>노력하고 있습니다.</span>
+					<div class="bt">바로가기  →</div>
+				</a>
+			</li>
+		</ul>
+		
+		<img src="./우림건설_files/main_bottom_bg.jpg" class="tit_bg">
+	</div>
+</div>
+
+	<!--사이트맵-->
+	<div class="site_map_b">
+		<div class="center_wrap">
+			<ul class="depth1"><!--common.js로 복사--><li class="">
+						<a href="http://www.woolim.com/company/greeting.php">회사소개</a>
+						<ul class="depth2 sm01">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/company/greeting.php">인사말</a></li>
+								<li class=""><a href="http://www.woolim.com/company/philosophy.php">기업이념</a></li>
+								<li class=""><a href="http://www.woolim.com/company/history.php">주요연혁</a></li>
+								<li class=""><a href="http://www.woolim.com/company/organization.php">조직도</a></li>
+								<li class=""><a href="http://www.woolim.com/company/map.php">오시는 길</a></li>
+							</div>
+						</ul>
+					</li><li class="">
+						<a href="http://www.woolim.com/business/business1.php">사업소개</a>
+						<ul class="depth2 sm02">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/business/business1.php">주택사업</a></li>
+								<li class=""><a href="http://www.woolim.com/business/business2.php">건축사업</a></li>
+								<li class=""><a href="http://www.woolim.com/business/business3.php">토목사업</a></li>
+								<li class=""><a href="http://www.woolim.com/business/business4.php">해외사업</a></li>
+							</div>
+						</ul>
+					</li><li class="">
+						<a href="http://www.woolim.com/plan/plan1.php">지속가능경영</a>
+						<ul class="depth2 sm03">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/plan/plan1.php">윤리경영</a></li>
+								<li class=""><a href="http://www.woolim.com/plan/plan2.php">품질경영</a></li>
+								<li class=""><a href="http://www.woolim.com/plan/plan3.php">안전/환경경영</a></li>
+								<li class=""><a href="http://www.woolim.com/plan/plan4.php">사이버감사실</a></li>
+							</div>
+						</ul>
+					</li><li class="">
+						<a href="http://www.woolim.com/sale/sale1.php">분양정보</a>
+						<ul class="depth2 sm04">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/sale/sale1.php">분양캘린더</a></li>
+								<li class=""><a href="http://www.woolim.com/sale/sale2.php">분양중인 단지</a></li>
+								<li class=""><a href="http://www.woolim.com/sale/sale3.php">분양예정 단지</a></li>
+								<li class=""><a href="http://www.woolim.com/sale/sale4.php">분양완료 단지</a></li>
+							</div>
+						</ul>
+					</li><li class="">
+						<a href="http://www.woolim.com/info/info1.php">현장/입주정보</a>
+						<ul class="depth2 sm05">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/info/info1.php">공사단지</a>
+									<ul class="depth3">
+										<li class=""><a href="http://www.woolim.com/info/info1.php">현장개요 및 공정률</a></li>
+										<li class=""><a href="http://www.woolim.com/info/info101.php">공정사진 및 내역</a></li>
+									</ul>
+								</li>
+								<li class=""><a href="http://www.woolim.com/info/info2.php">입주단지</a></li>
+								<li class=""><a href="http://www.woolim.com/info/info3.php">입주가이드</a></li>
+							</div>
+						</ul>
+					</li><li class="">
+						<a href="http://www.woolim.com/promotion/promotion1.php">홍보마당</a>
+						<ul class="depth2 sm06">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/promotion/promotion1.php">우림뉴스</a></li>
+								<li class=""><a href="http://www.woolim.com/promotion/promotion2.php">CI소개</a></li>
+							</div>
+						</ul>
+					</li><li class="">
+						<a href="http://www.woolim.com/cscenter/cscenter1.php">고객센터</a>
+						<ul class="depth2 sm07">
+							<div class="center_wrap">
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter1.php">고객문의</a></li>
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter2.php">사업문의</a></li>
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter3.php">채용문의</a></li>
+								<li class=""><a href="http://www.woolim.com/cscenter/cscenter4.php">A/S문의</a></li>
+							</div>
+						</ul>
+					</li><li class=" none">
+						<a href="http://www.woolim.com/sale/sale_write.php" class="none">관심고객 등록</a>
+					</li><li class=" none">
+						<a href="http://www.woolim.com/etc/email.php" class="none">이메일무단수집거부</a>
+					</li><li class=" none">
+						<a href="http://www.woolim.com/etc/private.php" class="none">개인정보취급방침</a>
+					</li></ul>
+		</div>
+	</div>
+<script type="text/javascript">
+	
+ function notice_getCookie( name ) {
+     var nameOfCookie = name + "=";
+     var x = 0;
+     while ( x <= document.cookie.length ) {
+         var y = (x+nameOfCookie.length);
+         if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+             if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+                 endOfCookie = document.cookie.length;
+             return unescape( document.cookie.substring( y, endOfCookie ) );
+         }
+         x = document.cookie.indexOf( " ", x ) + 1;
+         if ( x == 0 )  break;
+     }
+     return "";
+ }
+ 
+</script>
+
+<script>
+function fnGoSaleView(url){
+    location.href=url;
+}
+</script>
+	</div><!--center_wrap-->
+	<!--footer-->
+	<div id="footer">
+		<div class="link_area">
+			<div class="center_wrap">
+				<div class="link">
+<!-- 					<a href="../etc/agreement.php">이용약관</a>
+					 -->					<a href="http://www.woolim.com/etc/email.php">이메일무단수집거부</a>
+					<a href="http://www.woolim.com/etc/private.php">개인정보취급방침</a>
+				</div>
+				<div class="family_site">
+					<ul>
+						<li><a href="http://www.simgok-woolimfillu.co.kr/" target="_blank">우림필유</a></li>
+					</ul>
+					<p>패밀리 사이트 <img src="./우림건설_files/f_arr.png"></p>
+					
+				</div>
+			</div>
+		</div>
+		<div class="center_wrap">
+			<div class="address">
+				<p>경기도 성남시 분당구 성남대로 43번길 10 하나EZ타워 701호 우림건설㈜ 031-620-2700</p>
+				<p>Copyright ⓒ 2018 Woolim Construction Co., LTD. All rights reserved.</p>
+			</div>
+			<div class="logo">
+				<a href="http://www.simgok-woolimfillu.co.kr/" target="_blank"><img src="./우림건설_files/f_banner01.jpg"></a>
+				<a href="http://www.woolim.com/main/main.php"><img src="./우림건설_files/f_banner02.jpg"></a>
+				<a href="http://www.woolim.com/main/main.php"><img src="./우림건설_files/f_banner03.jpg"></a>
+			</div>
+		</div>
+	</div>
+
+
+
+<!-- #pop_member_password_confirm 비밀번호 확인 팝업 -->
+<div id="popMemberPasswordConfirm" class="pop-layer memberout">
+	<div class="pop-wd-96 ">
+		<div class="pop-sec-header">비밀번호 확인 
+			<div class="btn_close_r"><a href="javascript:;" class="pop-close btn-layerClose"></a></div>
+		</div>
+		<div class="pop-sec-cont bg-wh">
+			<form name="frmPwd" method="post">
+ 				<div class="msg-st-01">
+					<div class="comm_inner_60_1rem ">
+						<div class="line_btm"> 비밀번호를 입력해 주세요.</div>
+					</div> 
+				</div>
+				<div class="form_box_pop" style="padding:0 1rem;margin-top:1rem">
+ 					<input type="password" class="comm_tf_h100 wd_100_per" name="board_pw" placeholder="비밀번호 입력">
+				</div>
+	
+				<div class="comm_al_c" style="padding:1rem ">
+					<a href="javascript:;" onclick="bbsPwdCheck();" class="btn" style="width:100%;margin:0 auto;height:40px;line-height:40px"><span>확인</span></a>
+ 				</div>
+ 			</form>
+		</div>
+	</div>
+</div>
+<!-- #pop_member_password_confirm 비밀번호 확인 팝업 --> 
+
+
+</body></html>

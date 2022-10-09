@@ -1,114 +1,485 @@
 @charset "utf-8";
-*{margin:0; padding: 0; font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;}
-li{list-style: none;}
-a{text-decoration: none; color: #333;}
+*{
+    margin:0; 
+    padding:0; 
+    font-family:'Noto Sans KR', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+    color:#333;
+}
+
+/* header영역 */
+header{
+    width:100%; 
+    height:100px; background-color:black;
+    position:sticky; 
+    top:0px; 
+    z-index:100000;
+}
+#nav{
+    width:1300px; 
+    height:100px; 
+    margin:0 auto;
+    position:relative;
+    z-index:100;
+}
+#logo{
+    padding-top:38px;
+    width:100px;
+    height:24px; 
+    position:absolute;
+}
+#gnb{
+    width:750px; 
+    height:100px; 
+    line-height:100px; 
+    margin:0 auto;
+}
+#gnb > li {
+    width:150px;
+    height:40px; 
+    float:left;
+    text-align:center; color:white;
+}
+#gnb > li > a{
+    color:white; text-transform:uppercase;
+}
+#gnb > li:hover > a{
+    color:gold; 
+    transition:0.5s;
+}
+#icon{
+    width:68px; 
+    height:62px;
+    position:absolute; 
+    top:38px; 
+    right:0px;
+}
+#person{
+    width:50px; 
+    height:62px; 
+    margin-top:38px;
+}
+#lanuage{
+    width:50px; 
+    height:62px;
+    margin-top:38px; 
+    margin-left:10px;
+}
+/* header영역 */
+
+/* slider영역 */
+#main{
+    width:100%;
+    margin:0 auto;
+}
+#main_benner{
+    width:100%; 
+    height:100%;
+    margin:0 auto;
+    
+}
+.video_box{
+    width:100%; 
+    height:787px; 
+    background-color:black;
+    position: relative;
+}
+.video_box > video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.maintext_box{
+    width:1300px; 
+    margin:0 auto;
+    position:absolute;
+    top:150px;
+    left:50%;
+    margin-left:-650px;
+}
+.main_text > h2{
+    font-size:120px;  line-height:140px; 
+    color:white; 
+}
+.main_text > span{
+    font-size:24px;
+    line-height:48px;
+    color:white; 
+}
+button{
+    width:200px;
+    height:50px;
+    margin-top:30px;
+    font-size:24px; 
+    background-color:black;
+    cursor:pointer; 
+    color:white;
+}
+button:hover{
+    color:gold;
+}
+/* slider영역 */
+
+/* contents */
+#content{
+    width:1300px; 
+    height:700px; 
+    margin:0 auto;
+}
+#vehicles{
+    width:100%;
+    height:900px; 
+    margin:0 auto;
+}
+.vehicles_box{
+    width:1400px; 
+    height:100px;
+    margin:0 auto;
+}
+.title{
+    width:1300px; 
+    height:176px; 
+    margin:0 auto; 
+    margin-top:150px;
+}
+.title h3{
+    float:left;
+    font-size:24px; 
+    line-height:24px; 
+    font-weight:700; 
+}
+.line1::after{
+    content:""; 
+    display:inline-block; 
+    margin:0 0 7px 10px; 
+    text-shadow:none; 
+    background-color:#333; 
+    width:20px; 
+    height:2px;
+}
+.line2::before{
+    content:""; 
+    display:inline-block; 
+    margin:0 10px 7px 0; 
+    text-shadow:none; 
+    background-color:#333; 
+    width:20px;
+    height:2px;
+}
+#sustainable > .title > h3{
+    float:right;
+    font-size:24px; 
+    line-height:24px; 
+    font-weight:700;
+}
+.title span{
+    float:right;
+    font-weight:700;
+}
+
+.box1{
+    width:420px; 
+    height:700px; 
+    float:left;
+    margin-right:20px;
+}
+.box2{
+    width:420px; 
+    height:700px; 
+    float:left;
+    margin-right:20px;
+}
+.box3{
+    width:420px; 
+    height:700px; 
+    float:left;
+}
 
 
-header{width:100%; height:100px; background-color: black;  }
-#nav{width:1300px; height: 100px; margin: 0 auto;position: relative;z-index: 100;}
-#logo{padding-top: 38px;width:100px; height:24px; position:absolute;}
-#gnb{width: 750px; height:100px; line-height: 100px;; margin:0 auto;}
-#gnb > li {width:150px; height:40px; float:left;text-align: center; color:white;}
-#gnb > li > a{color:white; text-transform: uppercase;}
-#gnb > li:hover > a{color:gold;}
-#icon{width:68px; height:62px;position:absolute; top:38px; right:0px;}
-#person{width:50px; height:62px; padding-top: 38px;}
-#lanuage{width:50px; height:62px;padding-top: 38px; padding-left: 10px;}
+.kia_car1{
+    width:420px;
+    height:500px;
+}
+.kia_car2{
+    width:420px;
+    height:500px;
+}
+.kia_car3{
+    width:420px; 
+    height:500px;
+}
+.tb{
+    width:420px; 
+    height:200px; 
+    padding-top:80px;
+}
+.tb2{
+    width:420px; 
+    height:120px; 
+    padding-top:80px;
+}
+.box_text{
+    width:370px;
+    margin-left:50px;
+}
+.box_text > span{
+    font-size:24px; 
+    line-height:24px; 
+    font-weight:500;
+    word-spacing:-2px;
+}
+.box_text > p{
+    font-size:16px; 
+    line-height:24px; 
+    font-weight:300;
+    padding-top:10px;
+}
+
+#ment{
+    height:800px; 
+    margin:0 auto; 
+    margin-top:150px;
+}
+.text_box1{
+    width:1300px;
+    height:800px;
+    margin:0 auto;
+    position:relative;
+}
+.ment01{
+    font-size:5em; 
+    position:absolute;
+    left:50%;
+    margin-left:-650px;
+    text-transform:uppercase;
+    bottom:430px;
+    animation:mentIn 1.5s ease-out;
+}
+.ment02{
+    font-size:3em; 
+    font-weight:100;
+    position:absolute;
+    left:50%;
+    margin-left:-650px;
+    bottom:300px;
+    overflow:hidden;
+    animation:mentIn2 1.5s ease-out;
+}
+#sustainable{
+    width:100%; 
+    height:876px; 
+    margin-bottom:150px;
+}
+#sustainable_box{
+    width:1300px; 
+    height:700px;
+    margin:0 auto;
+}
+.sustainability_video{
+    width:100%; 
+    height:100%; 
+    object-fit:cover;
+}
 
 
-#main{width:100%; margin:0 auto;}
-#main_benner{width:100%; height:100%;margin:0 auto;}
-.video_box{width:100%; height:787px; background-color: black;}
-.video_box > video{width:100%;height:100%;object-fit: cover;}
-.maintext_box{width:1300px; height:787px; margin:0 auto;}
-.main_text{ width:1300px; height:487px; padding-top:300px; top:0; position: absolute;}
-.main_text > h2{font-size: 120px;  line-height:140px; color:white; }
-.main_text > span{font-size: 24px;line-height:48px;color:white; }
-button{width:200px; height: 50px;margin-top:30px;font-size: 24px; background-color:black; cursor:pointer; color:white;}
-button:hover{color:gold;}
 
-#content{width:1300px; height:700px; margin: 0 auto;}
-#vehicles{width:100%;height:900px; margin: 0 auto;}
-.vehicles_box{width:1400px; height:100px; margin: 0 auto;}
-
-.title{width: 1300px; height:176px; margin: 0 auto; margin-top:150px;}
-.title h3{float:left;font-size: 24px; line-height: 24px; font-weight: 700; }
-.line1::after{content: ""; display: inline-block; margin: 0 0 7px 10px; text-shadow: none; background-color: #333; width:20px; height: 2px;}
-.line2::before{content: ""; display: inline-block; margin: 0 10px 7px 0; text-shadow: none; background-color: #333; width:20px; height: 2px;}
-#sustainable > .title > h3{float:right;font-size: 24px; line-height: 24px; font-weight: 700;}
-.title span{float:right;font-weight: 700;}
-
-
-
-.box1{width:420px; height:700px; float:left;margin-right:20px;}
-.box2{width:420px; height:700px; float:left;margin-right:20px;}
-.box3{width:420px; height:700px; float:left;}
-
-
-.kia_car{width:420px; height:500px; background-color: aqua;}
-.tb{width: 420px; height:200px;padding-top:80px;}
-.tb2{width: 420px; height:120px;padding-top:80px;}
-.box_text{width:370px;margin-left:50px;}
-.box_text > span{font-size: 24px; line-height: 24px; font-weight: 500;word-spacing:-2px;}
-.box_text > p{font-size: 16px; line-height: 24px; font-weight: 300;padding-top:10px;}
-
-
-
-#ment{width:100%; height: 800px; margin:0 auto; margin-top:150px;}
-.text_box1{width: 1300px; height:800px; margin: 0 auto;}
-.text_box1 > h2{font-size: 80px; line-height: 100px; padding-top:300px; padding-bottom:30px; text-transform: uppercase;}
-.text_box1 > span{font-size: 48px; line-height: 60px; font-weight: 100; }
+#ment2{
+    width:100%; 
+    height:800px; 
+    margin:0 auto; 
+}
+#ment2_box{
+    width:1300px; 
+    height:600px;
+    margin:0 auto;
+}
+#photo_box{
+    width:600px; 
+    height:600px; 
+    float:left; 
+    margin-top:100px; 
+}
+.photo1{
+    width:290px; 
+    height:290px; 
+    float:left; 
+    background-image:url("../img/photo1.png");
+}
+.photo2{
+    width:290px; 
+    height:290px; 
+    float:right;
+    background-image:url("../img/photo2.png");
+}
+.photo3{
+    width:600px; 
+    height:290px; 
+    float:left; 
+    margin-top:20px;
+    background-image:url("../img/photo3.png");
+}
 
 
+#text_box2{
+    width:650px; 
+    height:600px; 
+    float:right;
+    margin-top:100px; 
+}
+.text_inbox{
+    margin-top:200px; 
+    margin-right:5px;
+}
+.text_inbox > h5{
+    text-align:right; 
+    font-size:48px; 
+    font-weight:100; 
+    letter-spacing:-5px;
+    word-spacing:5px;
+}
+#magazine{
+    width:100%;
+    height:100%;
+    margin:0 auto;
+}
+#magazine_box{
+    width:1300px;
+    height:700px;
+    margin:0 auto;
+}
+.text_inbox2{
+    width:600px; 
+    height:700px; 
+    float:left;
+}
+.text_magazine{
+    width:600px;
+    height:202px;
+    padding-top:200px;
+}
 
-#sustainable{width:100%; height:876px; margin-bottom: 150px;}
-#sustainable_box{width:1300px; height:700px;margin:0 auto;}
-.sustainability_video{width:100%; height:100%; object-fit: cover;}
+.text_magazine > span{
+    font-size:14px;
+    line-height:34px; 
+    font-weight:300; 
+}
+.text_magazine > h4{
+    font-size:27px; 
+    line-height:34px; 
+    font-weight:100;
+}
+.text_magazine > p{
+    font-size:14px; 
+    font-weight:100; 
+    line-height:30px;
+    margin-top:40px;
+}
+.magazine_photo{
+    width:700px; 
+    height:700px; 
+    background-color:antiquewhite;
+    float:left;
+}
+/* contents */
 
+/* footer */
+footer{
+    width:100%; 
+    height:180px; 
+    background-color:white; 
+    margin: 0 auto;
+}
+#footer_box{
+    width:1400px;
+    height:100px;
+    text-align:center;
+    padding-top:60px;
+    margin: 0 auto;
+}
+.copyright{
+    font-size:14px;
+    font-weight:500;
+    line-height:24px; 
+}
+#footer_box span{
+    font-size:14px;
+    line-height:24px; 
+    font-weight:500; 
+    margin-left:16px;
+}
+#footer_box span:nth-child(1){
+    margin-left:0px;
+}
+#footer_box p{
+    font-size:14px;
+    line-height:24px;
+}
+/* footer */
 
-
-#ment2{width:100%; height: 800px; margin:0 auto; }
-#ment2_box{width:1300px; height:600px; margin: 0 auto;}
-#photo_box{width:600px; height:600px; float:left; margin-top: 100px; }
-.photo1{width:290px; height:290px; float:left; background-image: url("../img/photo1.png");}
-.photo2{width:290px; height:290px; float:right;
-background-image: url("../img/photo2.png");}
-.photo3{width:600px; height:290px; float:left; margin-top: 20px;background-image: url("../img/photo3.png");}
-
-
-#text_box2{width:650px; height:600px; float:right;margin-top: 100px; }
-.text_inbox{margin-top:200px; margin-right:5px;}
-.text_inbox > h5{text-align: right; font-size: 48px; font-weight: 100; letter-spacing: -5px;word-spacing: 5px;}
-#magazine{width:100%; height:100%; margin:0 auto; }
-
-#magazine_box{width:1300px; height:700px; margin:0 auto;}
-.text_inbox2{width:600px; height:700px; float:left;}
-.text_magazine{width:600px; height:202px; padding-top:200px;}
-
-.text_magazine > span{font-size:14px; line-height: 34px; font-weight: 300; }
-.text_magazine > h4{font-size: 27px; line-height: 34px; font-weight: 100;}
-.text_magazine > p{font-size: 14px; font-weight: 100; line-height: 30px;margin-top:40px;}
-.magazine_photo{width:700px; height:700px; background-color: antiquewhite;float:left;}
-
-
-footer{width:100%; height:180px; background-color: white; margin: 0 auto;}
-#footer_box{width:1400px; height:100px;text-align: center;padding-top:60px;margin: 0 auto;}
-.copyright{font-size: 14px;font-weight: 500;line-height: 24px; }
-#footer_box span{font-size: 14px;line-height: 24px; font-weight: 500; margin-left:16px;}
-#footer_box span:nth-child(1){margin-left:0px;}
-#footer_box p{font-size: 14px;line-height: 24px;}
-
-#btn1,#btn2{color:black;font-size:13px;
+#btn1,#btn2{
+    color:black;
+    font-size:13px;
     width:50px;
     height:30px;
     line-height:30px;
     position:fixed;
     right:0%;
-    bottom:30%;cursor:pointer;
+    bottom:30%;
+    cursor:pointer;
     padding:10px;
     text-align:center;
     display:none;
 }
-#btn1:hover,#btn2:hover{color:gold;}
-#btn2{bottom:25%;}
+#btn1:hover,
+#btn2:hover{
+    color:gold;
+}
+#btn2{
+    bottom:25%;
+}
+
+@keyframes mentIn {
+    from{
+        bottom:0px;
+        opacity:0;
+    }
+    to{
+        bottom:430px;
+        opacity:1;
+    }
+}
+@keyframes mentIn2 {
+    from{
+        bottom:0px;
+        opacity:0;
+    }
+    to{
+        bottom:300px;
+        opacity:1;
+    }
+}
+@keyframes mentOut {
+    from{
+        bottom:430px;
+        opacity:1;
+    }
+    to{
+        bottom:0px;
+        opacity:0;
+    }
+}
+@keyframes mentOut2 {
+    from{
+        bottom:300px;
+        opacity:1;
+    }
+    to{
+        bottom:0px;
+        opacity:0;
+    }
+}

@@ -1,0 +1,11 @@
+$(window).load(function() {
+	$('.main_visual').flexslider({
+		directionNav: false,
+	});
+	//메인 슬라이드
+	$('.gallery_slide').flexslider({
+		controlNav: false,
+		//animation: "slide",              
+	});
+	//메인 갤러리 게시판 슬라이드
+});

@@ -1,0 +1,83 @@
+@charset "urf-8";
+
+*{margin:0; padding:0;}
+a{text-decoration: none; color:black;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Roboto', sans-serif;}
+    li{list-style:none;color:inherit}
+body{color:#333333;font-size:15px;}
+img{width:100%;height:100%;display:block;}
+
+/* header영역 */
+header{width:100%; height:120px;}
+
+#gnb{width:1300px; height:120px; margin:0 auto;}
+
+.logo{width:116px; height:120px; line-height: 120px; margin:0 auto; text-align: center; display: inline-block; margin-top:31px;}
+.logo a > img{width:116px; height:58px;}
+
+#left_gnb{width:592px; height:120px; float:left;}
+
+.search{width:24px; padding-top:48px;float:left;}
+.search li{width:100%;}
+.search li a > img{width:cover;}
+
+#menu1{float:right;}
+#menu1 > li{text-align:center; width:150px; height:120px; float:left; line-height: 120px;}
+#menu1 > li > a{font-size: 14px; font-weight: 500;}
+#menu1 > li:hover> a{color: rgb(80, 188, 231);}
+
+#right_gnb{width:592px; height:120px; float:right;}
+
+#menu2{float:left;}
+#menu2 > li{text-align:center; width:150px; height:120px; float:left; line-height: 120px;font-size: 14px;font-weight: 500;}
+#menu2 > li:hover> a{color: rgb(80, 188, 231);}
+
+#language{width:24px;padding-top:48px;float:right;}
+#language > li{text-align:center;float:left;}
+#language > li > a{font-size: 12px; font-weight: 500;}
+#language li a > img{width:cover;}
+
+/* header영역 */
+
+#title{width:100%; height:30px; margin: 0 auto;}
+#title > h2{text-align: center; font-size:25px; line-height: 30px; margin-top:150px;}
+
+
+
+
+#main_benner{ width:1200px; height:960px;  margin: 0 auto; position: relative; margin: 180px auto;}
+#main_box{overflow: hidden; width:1200px; height:700px; margin-bottom: 10px;}
+.container{width:3600px; height:700px; margin: 0 auto; transition:transform 0.5s; margin-bottom: 10px;}
+.inner{width: 1200px; height:700px; float:left;}
+.inner img{width:100%;}
+
+.photo1,.photo2,.photo3{width:393.33px; height:250px; background-color: #333333;float:left; margin-right:10px; cursor: pointer; overflow: hidden;}
+.photo3{margin-right:-10px;}
+.photo1>img{width:cover; height: cover;}
+
+
+
+
+#tour_info{width:1200px; height:500px; margin:180px auto;}
+#left_box{width:600px; height:500px; float:left;}
+#right_box{width:600px; height:500px; float:left;}
+
+#open_time{width:500px; height:180px; margin-bottom:150px;}
+#open_time > h4{font-size: 24px; line-height: 24px;margin-bottom: 25px;}
+#open_time > p{font-size: 14px; line-height: 31px;}
+
+#Event_venues{width:500px; height:150px;float:left;}
+#Event_venues > h4{font-size: 24px; line-height: 24px;margin-bottom: 25px;}
+#Event_venues > p{font-size: 14px; line-height: 31px;}
+
+.text{width:500px; height:500px; float:right;}
+.text > p{font-size: 16px; line-height: 33px; text-align: justify; letter-spacing: -1px; word-spacing: -1px; }
+.text > p:not(:nth-child(4)){padding-bottom:25px;}
+
+
+footer{background-color: #333333;width:100%; height:200px; margin-top: 150px;}
+.footer_box{width:1300px; height:100px;margin:0 auto; color:white;padding-top: 50px; position:relative}
+.footer_box > h3{font-size: 16px; font-weight: 500px; display: inline-block;}
+.info_contents{position: absolute;top:110px; font-size:15px; font-weight: 300;}
+.copyright{float:right; font-weight: 15px; padding-top:80px;}

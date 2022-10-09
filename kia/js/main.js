@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
 $(window).scroll(function(){
@@ -18,4 +19,9 @@ $("#btn2").on("click",function(){
     $("html").animate({scrollTop:5789},1000,"swing");
 });
 
+
 });
+$ = jquery;
+
+
+
